@@ -10,6 +10,8 @@ public class Main {
 
         while (scanner.hasNext()) {
             String type = scanner.next();
+            String id = scanner.next();
+            int pages = scanner.nextInt();
             
             if (type.equals("MONO")) {
                 jobs.add(new MonoPrint(scanner.next(), scanner.nextInt()));
@@ -20,4 +22,5 @@ public class Main {
 
         for (PrintJob job : jobs) System.out.println(job.summary());
     }
+
 }
