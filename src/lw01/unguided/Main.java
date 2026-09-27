@@ -13,6 +13,13 @@ public class Main {
             String type = scanner.next();
             String id = scanner.next();
             int days = scanner.nextInt();
+            int unit = scanner.nextInt();
+            
+            if (type.equalsIgnoreCase("LAPTOP")) {
+                rentals[i] = new LaptopRental(id, days);
+            } else {
+                rentals[i] = new ProjectorRental(id, days);
+            }
         }
 
         for (Rental rental : rentals) {
